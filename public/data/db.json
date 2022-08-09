@@ -100,6 +100,17 @@
       "costs": 1700,
       "comment": "Window(s) break easily",
       "finished": true
+    }, 
+    {
+      "id": 10,
+      "name": "damage",
+      "location": "De voorhoek 35",
+      "date": "2022-03-17",
+      "new": false,
+      "type": "Willfully",
+      "action": true,
+      "description": "Discussion with neighbours led to tree on roof",
+      "finished": false
     }
   ],
   "pdfs": [

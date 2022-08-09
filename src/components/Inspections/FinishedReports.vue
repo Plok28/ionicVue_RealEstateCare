@@ -52,18 +52,15 @@
         </ion-list>
 
         <ChangeInspection v-if="selectedInspection" :inspection="selectedInspection" v-show="isModalVisible" @close="closeModal"></ChangeInspection>
-        <!-- <ion-fab-button class="add">
-            <ion-icon :icon="add" @click="changeInspection" :inspection="selectedInspection" style="color: #00AAA2;"></ion-icon>
-        </ion-fab-button> -->
 
     </div>
 </template>
 
 <script>
   import mixins from '/src/mixins/mixins.js'
+  import { IonFabButton, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ChangeInspection from './ChangeInspection';
-  import { IonFabButton } from '@ionic/vue';
 
     export default {
         name: "FinishedReports",
@@ -76,7 +73,19 @@
             }
         },
         mixins: [mixins],
-        components: { ChangeInspection, IonFabButton },
+        components: { 
+            ChangeInspection, 
+            IonFabButton, 
+            IonItem, 
+            IonList, 
+            IonLabel, 
+            IonIcon, 
+            IonHeader, 
+            IonToolbar, 
+            IonButtons, 
+            IonButton, 
+            IonTitle 
+        },
         data() {
             return {
                 sortedInspections: [], 

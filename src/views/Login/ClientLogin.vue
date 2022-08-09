@@ -19,18 +19,20 @@
 
 <script>
 
-import { IonHeader, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonHeader, IonTitle, IonToolbar, IonButtons, IonItem } from '@ionic/vue';
 import mixins from '/src/mixins/mixins.js'
 import { close } from 'ionicons/icons';
 import { defineComponent } from 'vue';
-// import ThemeService from '../../services/theme.service'
 
 export default defineComponent({
   name: 'ClientLogin',
   components: { 
     IonHeader, 
     IonTitle, 
-    IonToolbar},
+    IonToolbar, 
+    IonButtons,
+    IonItem
+  },
   mixins: [mixins],
   setup() {
     return{
