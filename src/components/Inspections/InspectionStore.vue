@@ -63,10 +63,10 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
+  import { IonFabButton, modalController, IonBadge, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ShowInspection from './ShowInspection';
   import AddInspection from './AddInspection';
-  import { IonFabButton, modalController } from '@ionic/vue';
 
     export default {
         name: "InspectionsStore",
@@ -79,7 +79,20 @@
             }
         },
         mixins: [mixins],
-        components: { ShowInspection, IonFabButton },
+        components: { 
+            ShowInspection, 
+            IonFabButton, 
+            IonItem, 
+            IonList, 
+            IonLabel, 
+            IonIcon, 
+            IonHeader, 
+            IonToolbar, 
+            IonButtons, 
+            IonButton, 
+            IonTitle, 
+            IonBadge
+        },
         data() {
             return {
                 sortedInspections: [], 

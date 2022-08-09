@@ -1,21 +1,21 @@
 <template>
   <ion-page>
 
-    <ion-content :fullscreen="true">
-      
+    <div id="container">
       <InfoContainer name="Info about RealEstateCare" />
-    </ion-content>
+    </div>
+
   </ion-page>
 </template>
 
 <script lang="js">
 import { defineComponent } from 'vue';
-import { IonPage, IonContent } from '@ionic/vue';
+import { IonPage } from '@ionic/vue';
 import InfoContainer from '@/components/TabViews/InfoContainer.vue';
 // import TopHeader from '@/components/TopHeader'
 
 export default defineComponent({
   name: 'Tab2Page',
-  components: { InfoContainer, IonContent, IonPage }
+  components: { InfoContainer, IonPage }
 });
 </script>

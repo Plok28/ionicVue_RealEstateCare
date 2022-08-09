@@ -44,10 +44,21 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
+  import { IonItem, IonList, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
   import { download, close } from 'ionicons/icons';
 
     export default {
         name: "KnowledgeBase",
+        components: {
+            IonItem, 
+            IonList,
+            IonIcon, 
+            IonHeader, 
+            IonToolbar, 
+            IonButtons, 
+            IonButton, 
+            IonTitle
+        },
         setup() {
             return {
                 download, 

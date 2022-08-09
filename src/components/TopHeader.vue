@@ -5,7 +5,6 @@
             <ion-toolbar class="toolbar">
                 <ion-buttons slot="secondary">
                     <ion-button color="primary">
-                        <ion-badge color="light">7</ion-badge>
                         <ion-icon slot="icon-only" :icon="notifications"></ion-icon>
                     </ion-button>
                     <ion-button color="primary">
@@ -15,7 +14,9 @@
                       <router-link to="/login" v-if="!isLoggedIn">
                         <ion-icon slot="icon-only" :icon="personCircle"></ion-icon>
                       </router-link>
-                      <ion-icon href="#" slot="icon-only" v-if="isLoggedIn" @click="logout" :icon="personCircle"></ion-icon>
+                      <ion-button color="primary" v-if="isLoggedIn" @click="logout">
+                        <ion-icon href="#" slot="icon-only" :icon="personCircle"></ion-icon>
+                      </ion-button>
                     </section>
                 </ion-buttons>
                 <ion-title>
@@ -37,7 +38,14 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'TopHeader',
-    components: { IonHeader, IonToolbar, IonTitle, IonButton, IonButtons, IonIcon },
+    components: { 
+      IonHeader, 
+      IonToolbar, 
+      IonTitle, 
+      IonButton, 
+      IonButtons, 
+      IonIcon
+    },
     setup() {
     return {
       settings,

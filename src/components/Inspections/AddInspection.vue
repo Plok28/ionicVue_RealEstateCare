@@ -37,6 +37,7 @@
 <script>
 
 import { close } from 'ionicons/icons';
+import { IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
 import mixins from '/src/mixins/mixins.js';
 import DamageForm from '../forms/DamageForm.vue';
 import MaintenanceForm from '../forms/MaintenanceForm.vue';
@@ -49,6 +50,11 @@ export default {
     props: ['inspection'],
     mixins: [mixins],
     components: {
+      IonHeader, 
+      IonToolbar, 
+      IonButtons,
+      IonButton, 
+      IonTitle,
       DamageForm,
       MaintenanceForm, 
       TechnicalForm, 
