@@ -1,0 +1,7 @@
+{
+  "name": "ionicVue_RealEstateCare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
