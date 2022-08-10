@@ -1,0 +1,3 @@
+[build]
+  command = "ionic build --prod && vue-cli-service export"
+  publish = "dist"
