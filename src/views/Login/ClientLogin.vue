@@ -11,7 +11,7 @@
     <ion-item>Login with your credentials.</ion-item>
     <form class="loginForm" @submit.prevent="login({ email, password })" action="db.json/creds" method="post">
       <input type="text" placeholder="E-mail" v-model="email">
-      <input type="password" placeholder="Password" v-model="password">
+      <input type="password" placeholder="Your password" v-model="password">
       <button type="submit">Login</button>
     </form>
 
