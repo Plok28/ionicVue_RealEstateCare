@@ -1,5 +1,9 @@
 module.exports = {
-    configureWebpack: {        
+    configureWebpack: {    
+      publicPath: process.env.NODE_ENV === 'production'
+          ? '/ionicVue_RealEstateCare/'
+          : '/'
+      },    
       devServer: {
         port: 8008,
         headers: {
