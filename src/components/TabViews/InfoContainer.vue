@@ -74,12 +74,12 @@
 
 <script lang="js">
 import { defineComponent } from 'vue';
-import { IonContent } from '@ionic/vue';
+import { IonContent, IonCol, IonRow, IonIcon, IonGrid, IonList, IonLabel, IonItem  } from '@ionic/vue';
 import { information, mail, call, folder, help, navigate } from 'ionicons/icons';
 
 export default  defineComponent({
   name: 'InfoContainer',
-  components: { IonContent }, 
+  components: { IonContent, IonCol, IonRow, IonIcon, IonGrid, IonList, IonLabel, IonItem },
   setup() {
             return {
                 information, 

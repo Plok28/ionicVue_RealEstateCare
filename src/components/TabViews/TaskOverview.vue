@@ -44,7 +44,7 @@
 
 <script lang="js">
 import { defineComponent } from 'vue';
-import { IonContent, modalController } from '@ionic/vue';
+import { IonContent, modalController, IonGrid, IonCol, IonRow, IonIcon } from '@ionic/vue';
 import mixins from '/src/mixins/mixins.js'
 import InspectionStore from "../Inspections/InspectionStore"
 import FinishedReports from "../Inspections/FinishedReports"
@@ -53,7 +53,7 @@ import SettingsOverview from "../Settings/SettingsOverview"
 
 export default  defineComponent({
   name: 'TaskOverview',
-  components: { IonContent }, 
+  components: { IonContent, IonGrid, IonCol, IonRow, IonIcon  },
   mixins: [mixins],
   methods: {
     async fetchInspections() {
