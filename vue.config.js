@@ -1,5 +1,5 @@
 module.exports = {
-    configureWebpack: {        
+    configureWebpack: { 
       devServer: {
         port: 8008,
         headers: {
