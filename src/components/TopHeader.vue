@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+  <div>
       <ion-header class="header">
           <ion-toolbar class="toolbar">
               <ion-buttons slot="secondary">
@@ -23,14 +23,14 @@
               </ion-title>
           </ion-toolbar>
       </ion-header>
-  </ion-page>
+  </div>
 </template> 
 
 <script>
 // import { defineComponent } from 'vue';
 import { IonButton, IonButtons, IonIcon, modalController } from '@ionic/vue';
 import { helpCircle, personCircle, settings, notifications } from 'ionicons/icons';
-import { IonHeader, IonToolbar, IonTitle, IonPage, IonImg } from '@ionic/vue';
+import { IonHeader, IonToolbar, IonTitle, IonImg } from '@ionic/vue';
 import ClientLogin from "../views/Login/ClientLogin.vue";
 import { mapGetters, mapActions } from 'vuex'
 
@@ -43,7 +43,7 @@ export default {
       IonButton, 
       IonButtons, 
       IonIcon,
-      IonPage,
+      // IonPage,
       IonImg
     },
     setup() {
@@ -86,6 +86,10 @@ export default {
   .header{
     background: rgb(35, 35, 35);
     padding: 15px 0 15px 0;
+  }
+
+  ion-icon {
+    cursor: pointer;
   }
 
 </style>

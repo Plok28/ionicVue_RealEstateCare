@@ -38,10 +38,14 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { IonBadge } from '@ionic/vue';
 
 export default defineComponent({
     name: 'ShowInspection',
     props: ['inspection'],
+    components: {
+        IonBadge
+    },
     methods: {
       close() {
         this.$emit('close');

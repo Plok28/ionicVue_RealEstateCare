@@ -2,9 +2,9 @@
   <ion-page>
     
     <ion-content :fullscreen="true">
-      
       <SearchContainer name="Tab 2 page" />
     </ion-content>
+    
   </ion-page>
 </template>
 
@@ -12,7 +12,6 @@
 import { defineComponent } from 'vue';
 import { IonPage, IonContent } from '@ionic/vue';
 import SearchContainer from '@/components/TabViews/SearchContainer.vue';
-// import TopHeader from '@/components/TopHeader'
 
 export default defineComponent({
   name: 'Tab3Page',

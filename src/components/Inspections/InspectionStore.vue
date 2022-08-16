@@ -63,7 +63,7 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
-  import { IonFabButton, modalController, IonBadge, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
+  import { IonFabButton, modalController, IonBadge, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ShowInspection from './ShowInspection';
   import AddInspection from './AddInspection';
@@ -81,6 +81,7 @@
         mixins: [mixins],
         components: { 
             ShowInspection, 
+            IonSearchbar,
             IonFabButton, 
             IonItem, 
             IonList, 

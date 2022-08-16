@@ -76,7 +76,7 @@
 <script>
   import mixins from '/src/mixins/mixins.js'
   import { add, close, create, trash, notifications, radio} from 'ionicons/icons';
-  import { IonHeader, IonTitle, IonToolbar, IonButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonToggle } from '@ionic/vue';
+  import { IonHeader, IonTitle, IonToolbar, IonButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonToggle, IonBadge } from '@ionic/vue';
 
     export default {
         name: "KnowledgeBase",
@@ -90,7 +90,8 @@
           IonToolbar, 
           IonButton, 
           IonButtons, 
-          IonAvatar
+          IonAvatar, 
+          IonBadge
         },
         setup() {
             return {
