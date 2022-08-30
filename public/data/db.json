@@ -102,17 +102,6 @@
       "description": "sdfgsdfg hsllo"
     },
     {
-      "id": 10,
-      "name": "maintenance",
-      "location": "Spookstad 17",
-      "date": "2022-01-29",
-      "type": "wood rot",
-      "action": true,
-      "costs": 1700,
-      "comment": "Window(s) break easily",
-      "finished": "false"
-    },
-    {
       "id": 11,
       "name": "damage",
       "location": "De voorhoek 35",
