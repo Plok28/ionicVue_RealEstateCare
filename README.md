@@ -1,7 +1,8 @@
 ﻿# Markdown case: Real Estate Care
 
 **Starter info vóór start applicatie**.
-https://github.com/Pleun-18/ionicVue_RealEstateCare
+Online: https://8n1eaduvjo.appflowapp.com/tabs/tab1
+Git: https://github.com/Pleun-18/ionicVue_RealEstateCare
 
 *Inloggen dummy/loi gebruiker:*
 
