@@ -47,9 +47,9 @@ export default defineComponent({
     }
   },
   methods: {
-    fetchCreds() {
-        this.$store.dispatch('fetchCreds')
-    },
+    // fetchCreds() {
+    //     this.$store.dispatch('fetchCreds')
+    // },
     // login() {
     //   let checkCreds = this.creds.find(o => o.email === this.email && o.password === this.password);
     //   // this.$store.dispatch("login", true);
