@@ -12,7 +12,6 @@
 import { defineComponent } from 'vue';
 import { IonPage } from '@ionic/vue';
 import InfoContainer from '@/components/TabViews/InfoContainer.vue';
-// import TopHeader from '@/components/TopHeader'
 
 export default defineComponent({
   name: 'Tab2Page',

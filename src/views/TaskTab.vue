@@ -2,9 +2,7 @@
   <ion-page>
 
     <div id="container">
-      
         <TaskOverview />
-
     </div>
 
   </ion-page>

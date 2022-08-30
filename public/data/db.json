@@ -100,7 +100,7 @@
       "costs": 1700,
       "comment": "Window(s) break easily",
       "finished": true
-    }, 
+    },
     {
       "id": 10,
       "name": "damage",
@@ -158,7 +158,8 @@
           "on": true,
           "type": "/assets/ringtones/short.mp3"
         }
-      }
+      },
+      "mode": true
     },
     {
       "id": 2,

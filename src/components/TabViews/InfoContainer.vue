@@ -51,7 +51,7 @@
                   <h3>By Phone:</h3>
                 </div>
                 <p>You can contact us by phone 24/7. We will always be there.
-                  For emergency call you can call: +31 994 3029 91
+                  For emergency calls you can call: +31 994 3029 91
                 </p>
               </ion-col>
               <ion-col size="5" size-sm>

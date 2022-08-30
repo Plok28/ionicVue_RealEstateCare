@@ -8,9 +8,11 @@
 
 <script lang="js">
 import { defineComponent } from 'vue';
+import { IonSearchbar } from '@ionic/vue';
 
 export default defineComponent({
   name: 'SearchContainer',
+  components: { IonSearchbar },
   props: {
     name: String
   }

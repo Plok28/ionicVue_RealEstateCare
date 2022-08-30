@@ -58,7 +58,7 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
-  import { IonFabButton, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
+  import { IonFabButton, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar, IonBadge } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ChangeInspection from './ChangeInspection';
 
@@ -75,6 +75,8 @@
         mixins: [mixins],
         components: { 
             ChangeInspection, 
+            IonBadge,
+            IonSearchbar,
             IonFabButton, 
             IonItem, 
             IonList, 
@@ -120,7 +122,7 @@
             //select the inspection on-clicking
             selectInspection(inspectionId) {
                 // const modalContent = Object.entries();
-                this.selectedInspectionIndex = inspectionId - 1;
+                this.selectedInspectionIndex = inspectionId - 2;
                 console.log("Inspection ID = " + inspectionId);
             }
         },
