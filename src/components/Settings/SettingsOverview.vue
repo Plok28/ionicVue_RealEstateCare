@@ -7,10 +7,8 @@
               <ion-icon :icon="close" />
             </ion-button>
           </ion-buttons>
-            <ion-title>
               <h2> App settings </h2>
               <p> Accountgegevens: avatar, wachtwoord, licht/donker interface, meldingen + geluiden </p>
-            </ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -66,7 +64,6 @@
             </div>
             <button type="submit">Change credentials</button>
           </form>
-          <button @click="checkUser()">Check User</button>
         </ion-item>
       </div>
 
@@ -76,7 +73,7 @@
 <script>
   import mixins from '/src/mixins/mixins.js'
   import { add, close, create, trash, notifications, radio} from 'ionicons/icons';
-  import { IonHeader, IonTitle, IonToolbar, IonButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonToggle, IonBadge } from '@ionic/vue';
+  import { IonHeader, IonToolbar, IonButton, IonButtons, IonAvatar, IonLabel, IonList, IonItem, IonToggle, IonBadge } from '@ionic/vue';
 
     export default {
         name: "KnowledgeBase",
@@ -85,8 +82,7 @@
           IonList, 
           IonItem, 
           IonToggle, 
-          IonHeader, 
-          IonTitle, 
+          IonHeader,
           IonToolbar, 
           IonButton, 
           IonButtons, 
@@ -116,6 +112,7 @@
             let audio = new Audio('file.mp3')
             audio
           }, 
+          //Trying to change/patch the mode of the theme
           changeCreds: function(id) {
             console.log("this mode = " + this.mode);
             this.$store.commit('CHANGE_CREDS', { "id": id, "mode": this.mode});

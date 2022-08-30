@@ -53,7 +53,7 @@
         </div>
 
         <div id="damage">
-          <input type="hidden" name="finished" value="no">
+          <input type="hidden" name="finished" value="false">
         </div>
         
         <div>

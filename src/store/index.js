@@ -25,21 +25,27 @@ export const store = createStore({
         }
     },
     getters: {
+        //Checks wether there has been logged in
         isLoggedIn: state => {
             return state.isLoggedIn
         },
+        //Checks which credentials have been used after logging in
         currentCreds: state => {
             console.log(state);
             return state.currentCreds
         },
+        //Can be use for sorting/filtering/searching on name
         inspectionNames: state => {
             return state.inspections.filter(inspection => inspection.name);
         },
+        //Filters the finished reports from all inspections
         inspectionsFinished: state => {
-            return state.inspections.filter(inspection => inspection.finished == true);
+            return state.inspections.filter(inspection => inspection.finished === true || inspection.finished === "true");
         }, 
+        //Filters all inspections from the finished reports
         inspectionsToDo: state => {
-            return state.inspections.filter(inspection => inspection.finished == false);
+            
+            return state.inspections.filter(inspection => inspection.finished === false || inspection.finished === "false");
         }
     },
     mutations: {
@@ -82,7 +88,7 @@ export const store = createStore({
             alert("change inspection = " + payload.id);
             let index = state.inspections.findIndex(inspection => inspection.id == payload.id);
             state.inspections.splice(index, 1);
-            axios.patch('http://localhost:3000/inspections/'+ payload.id, {"description" : payload.description, "comment": payload.comment, "performer": payload.performer} );
+            axios.patch('http://localhost:3000/inspections/'+ payload.id, {"finished" : payload.finished, "description" : payload.description, "comment": payload.comment, "performer": payload.performer} );
         },
         CHANGE_CREDS( state, payload ){
             console.log("change creds = " + payload.id);
@@ -91,7 +97,7 @@ export const store = createStore({
             state.currentCreds.splice(index, 1);
             axios.patch('http://localhost:3000/creds/'+ payload.id, {"mode" : payload.mode, } );
         },
-        // mutations voor axios/REST finished inspections
+        //Mutations voor axios/REST finished inspections
         SET_FINISHED(state, payload) {
             state.finished = payload;
         },

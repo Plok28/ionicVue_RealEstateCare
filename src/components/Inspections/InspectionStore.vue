@@ -7,26 +7,21 @@
                 <ion-icon :icon="close" />
                 </ion-button>
             </ion-buttons>
-                <ion-title>
-                <h2> Current Assigned Reports</h2>
-                <p>Je kunt ze hier ook toevoegen</p>
-                </ion-title>
+                <h2> Assigned inspections</h2>
+                <p> Add - Delete</p>
             </ion-toolbar>
       </ion-header>
       <div class="spaceBetween">
         
       </div>
         <div class="choiceBar">
-            <ion-button @click="fetchInspections()" class="btn btn-success">Fetch</ion-button>
-            <!-- <ion-button @click="clearInspections()" class="btn btn-danger">Clear</ion-button> -->
-            <ion-button class="btn">A/Z</ion-button>
+            <ion-button @click="fetchInspections(), filteredInspections()" class="btn btn-success">Fetch</ion-button>
             <!-- Searchbar with a custom debounce -->
-            <ion-searchbar animated></ion-searchbar>
+            <ion-searchbar placeholder="Search..." v-model="search" animated></ion-searchbar>
         </div>
 
         <!--Loading indicator/spinner-->
         <div v-if="!loading" style="text-align: center;">
-            <h3>Loading...</h3>
             <img src="/assets/spinner.svg" alt="Loading indicator...">
         </div>
 
@@ -38,7 +33,7 @@
 
         <!--List with inspection data-->
         <ion-list class="list-group" v-if="inspections && inspections.length && !inspections.finished">
-            <ion-item class="list-group-item" v-for="inspection in inspectionsToDo" :key="inspection.location">
+            <ion-item class="list-group-item" v-for="inspection in sortedInspections" :key="inspection.location">
                 <!-- <ion-checkbox slot="start"></ion-checkbox> -->
                 <ion-label @click="selectInspection(inspection.id), showModal()" type="button" class="btn">
                     <div class="labelInfo">
@@ -63,7 +58,7 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
-  import { IonFabButton, modalController, IonBadge, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar } from '@ionic/vue';
+  import { IonFabButton, modalController, IonBadge, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonSearchbar } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ShowInspection from './ShowInspection';
   import AddInspection from './AddInspection';
@@ -90,15 +85,15 @@
             IonHeader, 
             IonToolbar, 
             IonButtons, 
-            IonButton, 
-            IonTitle, 
+            IonButton,
             IonBadge
         },
         data() {
             return {
                 sortedInspections: [], 
                 isModalVisible: false, 
-                selectedInspectionIndex: 0
+                selectedInspectionIndex: 0, 
+                search: ""
             }
         },
          methods: {
@@ -112,9 +107,9 @@
             }, 
             //filtering before getting cloned data in Mounted
             filteredInspections() {
-                console.log(this.inspections);
-                if (!this.inspections) return;
-                this.sortedInspections = [...this.inspections];
+                console.log("inspection to do: " + this.inspectionsToDo);
+                if (!this.inspectionsToDo) return;
+                this.sortedInspections = [...this.inspectionsToDo];
                 console.log("these are sorted: " + this.sortedInspections);
                 this.sortedInspections.sort(function (a, b) {
                     let dateA = new Date(a.date);
@@ -159,6 +154,7 @@
             },
             selectedInspection() {
                 console.log('Inspection selected')
+                console.log(this.sortedInspections)
                 return {
                     ...this.inspections[this.selectedInspectionIndex]
                 }
@@ -192,6 +188,11 @@
         float: right;
         width: 50px;
         height: 50px;
+    }
+
+    img {
+        width: 20%;
+        margin: 5px;
     }
 
     .choiceBar{

@@ -2,7 +2,7 @@
   <div id="container">
     <strong>{{ name }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"></ion-searchbar>
+    <ion-searchbar inputmode="search" show-cancel-button="focus" cancel-button-text="Cancel"></ion-searchbar>
   </div>
 </template>
 

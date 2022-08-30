@@ -7,22 +7,19 @@
               <ion-icon :icon="close" />
             </ion-button>
           </ion-buttons>
-            <ion-title>
               <h2> Overview Finished Reports</h2>
-              <p> Je moet hier de reports kunnen inzien en aanpassen</p>
-            </ion-title>
+              <p> Overview - Change </p>
         </ion-toolbar>
       </ion-header>
         <div class="choiceBar">
-            <ion-button @click="fetchInspections()" class="btn btn-success">Fetch</ion-button>
+            <ion-button @click="fetchInspections(), filteredInspections()" class="btn btn-success">Fetch</ion-button>
             <ion-button class="btn">A/Z</ion-button>
             <!-- Searchbar with a custom debounce -->
             <ion-searchbar animated></ion-searchbar>
         </div>
 
         <!--Loading indicator/spinner-->
-        <div v-if="!loading">
-            <h3 style="margin: 0 auto;">Loading...</h3>
+        <div v-if="!loading" style="text-align: center;">
             <img src="/assets/spinner.svg" alt="Loading indicator...">
         </div>
 
@@ -35,7 +32,7 @@
         <!--List with finished inspection data-->
         <ion-list class="list-group" v-if="inspections && inspections.length">
             <ion-item class="list-group-item"
-                v-for="inspection in inspectionsFinished"
+                v-for="inspection in sortedInspections"
                 :key="inspection.location">
                 <!-- <ion-checkbox slot="start"></ion-checkbox> -->
                 <ion-label type="button" class="btn">
@@ -58,7 +55,7 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
-  import { IonFabButton, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar, IonBadge } from '@ionic/vue';
+  import { IonFabButton, IonItem, IonList, IonLabel, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonSearchbar, IonBadge } from '@ionic/vue';
   import { add, close, create, trash } from 'ionicons/icons';
   import ChangeInspection from './ChangeInspection';
 
@@ -85,8 +82,7 @@
             IonHeader, 
             IonToolbar, 
             IonButtons, 
-            IonButton, 
-            IonTitle 
+            IonButton
         },
         data() {
             return {
@@ -102,9 +98,9 @@
             },
             //filtering before getting cloned data in Mounted
             filteredInspections() {
-                console.log(this.inspections);
-                if (!this.inspections) return;
-                this.sortedInspections = [...this.inspection];
+                console.log(this.inspectionsFinished);
+                if (!this.inspectionsFinished) return;
+                this.sortedInspections = [...this.inspectionsFinished];
                 console.log("these are sorted: " + this.sortedInspections);
                 this.sortedInspections.sort(function (a, b) {
                 let dateA = new Date(a.date);
@@ -122,7 +118,7 @@
             //select the inspection on-clicking
             selectInspection(inspectionId) {
                 // const modalContent = Object.entries();
-                this.selectedInspectionIndex = inspectionId - 2;
+                this.selectedInspectionIndex = inspectionId - 1;
                 console.log("Inspection ID = " + inspectionId);
             }
         },
@@ -159,6 +155,11 @@
     .labelInfo{
         display: flex;
         flex-direction: row;
+    }
+
+    img {
+        width: 20%;
+        margin: 5px;
     }
 
     ion-badge, div > p {
