@@ -30,6 +30,11 @@
           <h3>Comments: </h3>
           <p>{{ inspection.comment }}</p>
         </div>
+
+      <form method="patch" @submit="changeInspection(inspection.id)">
+          <input name="finished" type="submit" value="Inspection finished">
+      </form>
+
       </div>
     </div>
   </transition>
@@ -52,12 +57,27 @@ export default defineComponent({
       },
       pushId() {
         this.$emit('pushId');
-      }
+      }, 
+      changeInspection: function(event, id) {
+        event.preventDefault();
+        //Changes an inspection to a finished inspection
+        //but logs out afterward? 
+        this.$store.commit('CHANGE_INSPECTION', { "id": id, "finished": this.finished = true, });
+        return "Selected inspections has been finished";
+      }, 
     },
 })
 </script>
 
 <style scoped>
+
+  input {
+    background: #00AAA2;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+
+  }
 
   h3 {
     line-height: 0;

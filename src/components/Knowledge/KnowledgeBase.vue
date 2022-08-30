@@ -7,9 +7,8 @@
               <ion-icon :icon="close" />
             </ion-button>
           </ion-buttons>
-            <ion-title>
               <h2> Knowledge base </h2>
-            </ion-title>
+              <p></p>
         </ion-toolbar>
       </ion-header>
 
@@ -44,7 +43,7 @@
 
 <script>
   import mixins from '/src/mixins/mixins.js'
-  import { IonItem, IonList, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle } from '@ionic/vue';
+  import { IonItem, IonList, IonIcon, IonHeader, IonToolbar, IonButtons, IonButton } from '@ionic/vue';
   import { download, close } from 'ionicons/icons';
 
     export default {
@@ -56,8 +55,7 @@
             IonHeader, 
             IonToolbar, 
             IonButtons, 
-            IonButton, 
-            IonTitle
+            IonButton
         },
         setup() {
             return {

@@ -45,6 +45,17 @@
       "finished": false
     },
     {
+      "id": 5,
+      "name": "modify",
+      "location": "Slagersweg 89",
+      "date": "2022-09-26",
+      "performer": "Huurder",
+      "type": "change",
+      "description": "Change Window(s)",
+      "comment": "Window(s) break easily",
+      "finished": true
+    },
+    {
       "id": 6,
       "name": "damage",
       "location": "De voorhoek 35",
@@ -53,7 +64,7 @@
       "type": "Willfully",
       "action": true,
       "description": "Discussion with neighbours led to tree on roof",
-      "finished": true
+      "finished": "true"
     },
     {
       "id": 7,
@@ -99,10 +110,10 @@
       "action": true,
       "costs": 1700,
       "comment": "Window(s) break easily",
-      "finished": true
+      "finished": "false"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "damage",
       "location": "De voorhoek 35",
       "date": "2022-03-17",
@@ -156,7 +167,7 @@
         "mode": "dark",
         "sound": {
           "on": true,
-          "type": "/assets/ringtones/short.mp3"
+          "type": "/assets/ringtones/short1.mp3"
         }
       },
       "mode": true
@@ -173,7 +184,7 @@
         "mode": "light",
         "sound": {
           "on": true,
-          "type": "/assets/ringtones/short.mp3"
+          "type": "/assets/ringtones/short2.mp3"
         }
       }
     }

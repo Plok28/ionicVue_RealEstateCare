@@ -64,6 +64,7 @@ export default defineComponent({
   h2 {
     font-size: 24px;
     font-family: 'Titillium Web', sans-serif;
+    margin: 0;
   }
 
   h3 {
@@ -76,7 +77,7 @@ export default defineComponent({
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    line-height: 1.4;
+    line-height: 1;
   }
 
   input {
@@ -95,6 +96,7 @@ export default defineComponent({
   .logo{
     width: 180px;
     z-index: 99;
+    padding-inline-start: 5px;
   }
   
   .toolbar{
@@ -105,7 +107,7 @@ export default defineComponent({
     --background: #00AAA2;
   }
   
-  @media (prefers-color-scheme: light) {
+  /* @media (prefers-color-scheme: light) {
     :root {
       --color-toolbar-background: white;
       --color-toolbar-text: black;
@@ -113,22 +115,24 @@ export default defineComponent({
     h1, h2, h3 {
       color: black;
     }
-  }
+  } */
 
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root, body {
       --color-toolbar-background: black;
       --color-toolbar-text: white;
-    }
-    h1, h2, h3 {
       color: white;
+    }
+    a, h1, h2, h3 {
+      text-decoration: none !important;
+      color: white !important;
     }
   }
 
-  ion-toolbar {
+  /* ion-toolbar {
     --background: var(--color-toolbar-background);
     color: var(--color-toolbar-text);
-  }
+  } */
 
   .verticalScrollContainer {
     background: var(--color-toolbar-background);
