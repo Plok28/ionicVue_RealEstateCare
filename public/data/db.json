@@ -74,9 +74,9 @@
       "new": false,
       "type": "Willfully",
       "action": true,
-      "description": "asdsdfsadf",
+      "description": "Discussion with neighbours led to tree on roof",
       "finished": true,
-      "comment": "asdfasdfasdf"
+      "comment": "Don't know"
     },
     {
       "id": 8,
@@ -97,9 +97,9 @@
       "type": "wood rot",
       "action": true,
       "costs": 1700,
-      "comment": "sdfgsdfgsdfgsdfg",
+      "comment": "Discussion with neighbours led to wood rot",
       "finished": true,
-      "description": "sdfgsdfg hsllo"
+      "description": "Hoe gaat het nu?"
     },
     {
       "id": 11,
@@ -111,6 +111,17 @@
       "action": true,
       "description": "Discussion with neighbours led to tree on roof",
       "finished": false
+    },
+    {
+      "name": "technical",
+      "location": "Troeperstart 28",
+      "date": "2022-06-22",
+      "type": "Ventilation",
+      "malfunction": "Defect",
+      "action": "no",
+      "comment": "Ventialation is defect",
+      "finished": "false",
+      "id": 12
     }
   ],
   "pdfs": [

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-    <form id="inspectionsForm" name="addInspectionForm" action="http://localhost:3000/inspections" method="post">
+    <form id="inspectionsForm" name="addInspectionForm" action="http://localhost:3000/inspections" method="post" target="_blank">
 
         <div id="maintenance">
           <label class="labelTitle" for="typeOf">Type: </label>  
@@ -53,7 +53,7 @@
         </div>
 
         <div id="maintenance">
-          <input type="hidden" name="finished" value="no">
+          <input type="hidden" name="finished" value="false">
         </div>
         
         <div>

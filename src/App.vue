@@ -123,7 +123,7 @@ export default defineComponent({
       --color-toolbar-text: white;
       color: white;
     }
-    a, h1, h2, h3 {
+    a, h1, h2, h3, .labelTitle {
       text-decoration: none !important;
       color: white !important;
     }

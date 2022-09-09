@@ -95,7 +95,6 @@ export const store = createStore({
             let index = state.currentCreds.findIndex(creds => creds.id == payload.id);
             console.log("check current works = " + index)
             state.currentCreds.splice(index, 1);
-            axios.patch('http://localhost:3000/creds/'+ payload.id, {"mode" : payload.mode, } );
         },
         //Mutations voor axios/REST finished inspections
         SET_FINISHED(state, payload) {

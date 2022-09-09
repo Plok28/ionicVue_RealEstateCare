@@ -12,21 +12,13 @@ export default {
             this.$store.dispatch('fetchCreds')
         }, 
         setTheme(event) {
-            // let currentUser = localStorage.getItem("currentUser");
             let checkCreds = this.creds.find(o => o.mode === this.mode);
             console.log(checkCreds);
             // console.log(checkCreds.preferences.splice(1, 1, "dark"))
-            if(event.detail.checked === true || checkCreds.preferences.mode == "dark"){
+            if(event.detail.checked === true){
                 document.body.setAttribute('color-theme', 'dark')
-                // checkCreds.$set(checkCreds.preferences, 1, "dark")
-                // const setToggle = this.toggle.map(function(element, index) {
-                //     if(index === Index){
-                //       element.toggle = newTaskTitle
-                //     }
-                //    return setToggle;
-                //  });
                 console.log("Dark Theme Enabled");
-            }else if(event.detail.checked === false || checkCreds.preferences.mode == "light"){
+            }else if(event.detail.checked === false){
                 document.body.setAttribute('color-theme', 'light');
                 console.log("Light Theme Enabled");
             }

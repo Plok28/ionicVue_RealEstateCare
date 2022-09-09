@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 
-    <form id="inspectionsForm" name="addInspectionForm" action="http://localhost:3000/inspections" method="post">
+    <form id="inspectionsForm" name="addInspectionForm" action="http://localhost:3000/inspections" method="post" target="_blank">
 
         <div id="damage">
           <label class="labelTitle" for="typeOf">Type: </label>  
@@ -86,12 +86,14 @@ export default {
       }
     },
     methods: {
-      handleSubmit: function(event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
-        const value = Object.fromEntries(data.entries());
-        console.log(value);
-        alert("Form succesfully saved");
+      handleSubmit: function() {
+        if (confirm('Are you sure you want to submit?')) {
+            // yes
+            return true;
+        } else {
+            // Do nothing!
+            return false
+        } 
       }, 
       
     }
