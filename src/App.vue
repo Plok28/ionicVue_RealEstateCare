@@ -2,7 +2,7 @@
   <ion-app>
 
     <ion-page v-if="!isLoggedIn">
-      <TopHeader />
+      <!-- <TopHeader /> -->
       <ClientLogin />
     </ion-page>
     <ion-page v-if="isLoggedIn" :class="(mode === 'dark') ? 'dark' : 'light'">
