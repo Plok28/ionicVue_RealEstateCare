@@ -122,6 +122,17 @@
       "comment": "Ventialation is defect",
       "finished": "false",
       "id": 12
+    },
+    {
+      "name": "technical",
+      "location": "Noorderfliet 92",
+      "date": "2022-06-22",
+      "type": "Cooling",
+      "malfunction": "Technical damage to curtain",
+      "action": "yes",
+      "comment": "Nothing real matters.",
+      "finished": "false",
+      "id": 13
     }
   ],
   "pdfs": [
