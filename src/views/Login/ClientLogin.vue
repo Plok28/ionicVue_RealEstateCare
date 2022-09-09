@@ -9,7 +9,7 @@
     <br>
     <ion-item>Login with your credentials.</ion-item>
     <form class="loginForm" @submit.prevent="login({ email, password })" action="db.json/creds" method="post">
-      <input pattern="\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b" type="text" placeholder="E-mail" v-model="email">
+      <input type="text" placeholder="E-mail" v-model="email">
 			<input id="password" type="password" placeholder="Your password" v-model="password">
 			<ion-icon @click="togglePassword" id="eye" class="eyeOn" :icon="eye"></ion-icon>
       <button type="submit">Login</button>
