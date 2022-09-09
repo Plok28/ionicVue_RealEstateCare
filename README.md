@@ -8,6 +8,7 @@ https://github.com/Pleun-18/ionicVue_RealEstateCare
 E-mail: loi@loi.nl
 Wachtwoord: admin321
 > **Note:** Json-server moet draaien om inspecties en logins te kunnen gebruiken/vinden.
+    command: json-server --watch public/data/db.json
 > 
 
 ## Uitleg applicatie:
