@@ -92,9 +92,9 @@ export default defineComponent({
   
   #eye {
     z-index: 9999;
-    position: absolute;
-    top: 42%;
-    right: 100px;
+    position: relative;
+    left: 265px;
+    bottom: 22px;
     cursor: pointer;
   }
 
