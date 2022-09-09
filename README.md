@@ -1,16 +1,17 @@
 ﻿# Markdown case: Real Estate Care
 
 **Starter info vóór start applicatie**.
-Online: https://8n1eaduvjo.appflowapp.com/tabs/tab1
-Git: https://github.com/Pleun-18/ionicVue_RealEstateCare
+https://github.com/Pleun-18/ionicVue_RealEstateCare
 
 *Inloggen dummy/loi gebruiker:*
 
 E-mail: loi@loi.nl
 Wachtwoord: admin321
+> **Note:** Json-server moet draaien om inspecties en logins te kunnen gebruiken/vinden.
+> 
 
 ## Uitleg applicatie:
-De applicatie is gebouwd om een versimpeld overzicht/systeem voor inspecties te creëeren voor makelaars. De applicatie heeft de hieronder genoemde technische ontwikkelingen die het voor de makelaar makkelijker maakt om ter plekke inspecties toe te voegen, aanpassen te passen en te verwijderen: 
+De applicatie is gebouwd om voor makelaars een versimpeld overzicht/systeem voor inspecties te creëeren. De applicatie heeft de hieronder genoemde technische ontwikkelingen die het voor de makelaar makkelijker maakt om ter plekke inspecties toe te voegen, aanpassen te passen en te verwijderen: 
 
 -   Webbased (SPA) IOS + Android + Touch interface
 -   UI/UX moet aansluiten op design/workflow
@@ -92,7 +93,7 @@ Aangezien dit mijn eerste VueJs applicatie is, en er nog zoveel verbeterd kan wo
 Is gekoppeld aan de gebruiker en wordt toegepast bij het inloggen.
 Wordt nog niet in de database aangepast na een verandering door de gebruiker in de settings. Ik dacht dit te kunnen doen a.d.h.v een toggle, maar die geeft alleen true en false terug en niet "dark" of "light". Ik mis momenteel de correcte koppeling.
  **- Notificaties:**
-Er zijn nog geen notificaties, dit is momenteel een alert
+Er zijn nog geen notificaties, dit is momenteel een alert.
  **- Redirect after upload:** 
 De gebruiker wordt opnieuw verwezen naar het inlogscherm ná de upload van een nieuwe inspectie. Dit gebeurt ook na het veranderen van een inspectie. Er werd online Dit werkte echt niet. 
  **- Upload van strings naar db.json:** 
@@ -106,9 +107,9 @@ Hier is nog geen oplossing voor gevonden.
 > **Note:** Omdat de sortering op alfabet is toegevoegd kon ik niet ook nog een andere gesorteerde array in de for-loop plaatsen. Daarvoor mis ik nog een stuk logica.
 > 
 **- Direct toevoegen van foto's**
-Het direct toevoegen van foto's is nog niet toegevoegd door een mindere kennis in camera implementatie in een applicatie. Dit lijkt mij meer relevant om de app te plaatsen, dan om hier acheraf foto's aan toe te voegen. Mocht ik dit wel in de applicatie geplaatst hebben zou dit hetzelfde gedaan zijn als alle andere informatie die wordt gegeven bij de melding van schade.
+Het direct toevoegen van foto's is nog niet toegevoegd door een mindere kennis in camera implementatie in een applicatie. Dit lijkt mij meer relevant om direct in de app te gebruiken, dan om hier acheraf foto's aan toe te voegen. Mocht ik dit wel in de applicatie geplaatst hebben zou dit hetzelfde gedaan zijn als alle andere informatie die wordt gegeven bij de melding van schade.
 **- Cashing van de gegevens**
-Bij de melding/aanpassing/verwijdering van schade worden de gegeven na een submit opgeslagen in de db.json. Dit wordt niet als cash gedaan. Echter bij het inloggen worden de gegevens van de gebruiker wél opgeslagen als local storage. Dit is niet de bedoeling als het gaat om explicite gebruikersgegevens, maar normaal gesproken hoort dit ook niet in de front-end opgeslagen te worden, maar via de backend in de database. De huidige keuze is puur met dummy materiaal uitgewerkt om de werking van de applicatie te kunnen inzien.
+Bij de melding/aanpassing/verwijdering van schade worden de gegevens na een submit opgeslagen in de db.json. Dit wordt niet als cash gedaan. Echter bij het inloggen worden de gegevens van de gebruiker wél opgeslagen als local storage. Dit is niet de bedoeling als het gaat om explicite gebruikersgegevens, maar normaal gesproken hoort dit ook niet in de front-end opgeslagen te worden, maar via de backend in de database. De huidige keuze is puur met dummy materiaal uitgewerkt om de werking van de applicatie te kunnen inzien.
 **- CRUD werkt niet in online dienst?**
-Om de een of andere reden kan ik via de online dienst geen CRUDS uitvoeren via de front-end naar de db.json. De aanpassingen worden gewoonweg niet meegenomen. Dit kan wel in mijn lokale omgeving.
+Om de een of andere reden kan ik via de online dienst geen CRUDS uitvoeren via de front-end naar de db.json via de json-server. De aanpassingen worden gewoonweg niet meegenomen. Dit kan wel in mijn lokale omgeving.
  
