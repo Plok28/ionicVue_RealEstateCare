@@ -128,6 +128,9 @@ body[color-theme=dark] {
   --ion-color-light-shade: #1e2023;
   --ion-color-light-tint: #383a3e;
 }
+body[color-theme=dark] .labelTitle {
+  color: white;
+}
 
 /*
  * iOS Dark Theme

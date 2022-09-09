@@ -34,7 +34,7 @@
         <ion-item>
           <!-- <ion-icon slot="start" name="moon"></ion-icon> -->
           <ion-label>Toggle Dark Theme</ion-label>
-          <ion-toggle slot="end" @ionChange="setTheme($event), changeCreds(currentCreds.id)" v-model="mode"></ion-toggle>
+          <ion-toggle :checked="checked" slot="end" @ionChange="setTheme($event)" v-model="mode"></ion-toggle>
         </ion-item>
 
         <ion-item>
@@ -103,7 +103,6 @@
         computed: {
           currentCreds () {
               var getter = this.$store.getters.currentCreds;
-              console.log(getter[0].name);
               return getter[0];
           }
         },
@@ -113,11 +112,11 @@
             audio
           }, 
           //Trying to change/patch the mode of the theme
-          changeCreds: function(id) {
-            console.log("this mode = " + this.mode);
-            this.$store.commit('CHANGE_CREDS', { "id": id, "mode": this.mode});
-            console.log("CHANGED CREDS BY CHANGED" + id.id)
-          }, 
+          // changeCreds: function(id) {
+          //   console.log("this mode = " + this.mode);
+          //   this.$store.commit('CHANGE_CREDS', { "id": id, "mode": this.mode});
+          //   console.log("CHANGED CREDS BY CHANGED" + id.id)
+          // }, 
         }, 
         
     }

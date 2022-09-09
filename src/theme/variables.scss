@@ -83,6 +83,9 @@ http://ionicframework.com/docs/theming/ */
    */
 
   body[color-theme="dark"] {
+    .labelTitle {
+      color: white;
+    }
     --ion-color-primary: #d3d3d3;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
