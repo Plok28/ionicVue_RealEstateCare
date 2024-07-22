@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-prod build",
+    "build": "vue-cli-service build",
     "deploy": "npm run build && git add . && git commit -m 'Deploy to GitHub Pages' && git push",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
