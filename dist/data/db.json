@@ -1,0 +1,213 @@
+{
+  "inspections": [
+    {
+      "id": 1,
+      "name": "damage",
+      "location": "Invanteriestraat 25",
+      "date": "2022-07-16",
+      "new": true,
+      "type": "Violence",
+      "action": false,
+      "description": "Multiple broken windows...",
+      "finished": false
+    },
+    {
+      "id": 2,
+      "name": "maintenance",
+      "location": "Spookstad 17",
+      "date": "2022-01-29",
+      "type": "wood rot",
+      "action": true,
+      "costs": 1700,
+      "comment": "Window(s) break easily",
+      "finished": false
+    },
+    {
+      "id": 3,
+      "name": "technical",
+      "location": "De achterhoek 53",
+      "date": "2022-02-21",
+      "type": "cooling",
+      "malfunction": "heater broken",
+      "confirmed": true,
+      "comment": "heater needs repearing",
+      "finished": false
+    },
+    {
+      "id": 4,
+      "name": "modify",
+      "location": "Bakkersweg 98",
+      "date": "2022-02-26",
+      "performer": "Huurder",
+      "type": "change",
+      "description": "Change Window(s)",
+      "comment": "Window(s) break easily",
+      "finished": false
+    },
+    {
+      "id": 5,
+      "name": "modify",
+      "location": "Slagersweg 89",
+      "date": "2022-09-26",
+      "performer": "Huurder",
+      "type": "change",
+      "description": "Change Window(s)",
+      "comment": "Window(s) break easily",
+      "finished": true
+    },
+    {
+      "id": 6,
+      "name": "damage",
+      "location": "De voorhoek 35",
+      "date": "2022-03-17",
+      "new": false,
+      "type": "Willfully",
+      "action": true,
+      "description": "Discussion with neighbours led to tree on roof",
+      "finished": "true"
+    },
+    {
+      "id": 7,
+      "name": "damage",
+      "location": "De voorhoek 36",
+      "date": "2022-03-17",
+      "new": false,
+      "type": "Willfully",
+      "action": true,
+      "description": "Discussion with neighbours led to tree on roof",
+      "finished": true,
+      "comment": "Don't know"
+    },
+    {
+      "id": 8,
+      "name": "damage",
+      "location": "Invanteriestraat 25",
+      "date": "2022-07-16",
+      "new": true,
+      "type": "Violence",
+      "action": false,
+      "description": "Multiple broken windows...",
+      "finished": true
+    },
+    {
+      "id": 9,
+      "name": "maintenance",
+      "location": "Spookstad 17",
+      "date": "2022-01-29",
+      "type": "wood rot",
+      "action": true,
+      "costs": 1700,
+      "comment": "Discussion with neighbours led to wood rot",
+      "finished": true,
+      "description": "Hoe gaat het nu?"
+    },
+    {
+      "id": 11,
+      "name": "damage",
+      "location": "De voorhoek 35",
+      "date": "2022-03-17",
+      "new": false,
+      "type": "Willfully",
+      "action": true,
+      "description": "Discussion with neighbours led to tree on roof",
+      "finished": false
+    },
+    {
+      "name": "technical",
+      "location": "Troeperstart 28",
+      "date": "2022-06-22",
+      "type": "Ventilation",
+      "malfunction": "Defect",
+      "action": "no",
+      "comment": "Ventialation is defect",
+      "finished": "false",
+      "id": 12
+    },
+    {
+      "name": "technical",
+      "location": "Noorderfliet 92",
+      "date": "2022-06-22",
+      "type": "Cooling",
+      "malfunction": "Technical damage to curtain",
+      "action": "yes",
+      "comment": "Nothing real matters.",
+      "finished": "false",
+      "id": 13
+    },
+    {
+      "name": "mainenance",
+      "location": "asdfasdf",
+      "date": "2022-06-22",
+      "type": "Painting",
+      "action": "yes",
+      "comment": "sdfasdfasdfasdfasdfasdf",
+      "finished": "false",
+      "id": 14
+    }
+  ],
+  "pdfs": [
+    {
+      "id": 1,
+      "img": "./assets/pdfs/img/01.png",
+      "name": "Sustainable Real estate",
+      "description": "Sustainable Real Estate",
+      "src": "./assets/pdfs/01. Sustainable Real Estate.pdf"
+    },
+    {
+      "id": 2,
+      "img": "./assets/pdfs/img/02.png",
+      "name": "Handbook on residential property prices",
+      "description": "Handbook on residential property prices",
+      "src": "./assets/pdfs/02. Handbook on Residential Property Prices.pdf"
+    },
+    {
+      "id": 3,
+      "img": "./assets/pdfs/img/03.png",
+      "name": "Technical information",
+      "description": "Technical information",
+      "src": "./assets/pdfs/03. Technical information.pdf"
+    },
+    {
+      "id": 4,
+      "img": "./assets/pdfs/img/04.png",
+      "name": "The ultimate beginners guide",
+      "description": "The ultimate beginners guide",
+      "src": "./assets/pdfs/04. The Ultimate Beginners Guide.pdf"
+    }
+  ],
+  "creds": [
+    {
+      "id": 1,
+      "registered": false,
+      "avatar": "/assets/avatars/avatar1.jpg",
+      "name": "pleun",
+      "function": "Realtor",
+      "email": "pleun@onlinesupporter.nl",
+      "password": "admin123",
+      "preferences": {
+        "mode": "dark",
+        "sound": {
+          "on": true,
+          "type": "/assets/ringtones/short1.mp3"
+        }
+      },
+      "mode": true
+    },
+    {
+      "id": 2,
+      "registered": false,
+      "avatar": "/assets/avatars/avatar2.jpg",
+      "name": "loi",
+      "function": "Realtor",
+      "email": "loi@loi.nl",
+      "password": "admin321",
+      "preferences": {
+        "mode": "light",
+        "sound": {
+          "on": true,
+          "type": "/assets/ringtones/short2.mp3"
+        }
+      }
+    }
+  ]
+}
